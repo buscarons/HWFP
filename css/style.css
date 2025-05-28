@@ -1,0 +1,235 @@
+:root {
+    --primary-color: #ffc464;
+    --secondary-color: #6b4528;
+    --padding: .5rem;
+    --border-radius: 5px;
+    --font-family: Arial, sans-serif;
+    --text-color: #333333;
+}
+
+@font-face {
+    font-family: SauceT;
+    src: url(/fonts/Sauce\ Tomato.otf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+    font-size: 20px;
+    font-family: var(--font-family);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, rgb(255, 180, 59), rgb(236, 117, 5));
+}
+
+header,footer {
+    flex-shrink: 0;
+    text-align: center;
+    height: 10vh;
+}
+
+/* ham-menu */
+.off-screen-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.off-screen-menu li {
+    margin: 1rem 0;
+}
+
+.off-screen-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.off-screen-menu a:hover {
+    color: rgb(244, 43, 3)
+}
+
+.off-screen-menu {
+    background-color: rgb(236, 117, 5);
+    height: 100vh;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    right: -50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: .3s ease-in-out;
+    border-radius: 5px 0 0 5px;
+    box-shadow: -2px 2px rgb(209, 94, 37); 
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+.ham-menu {
+    background-color: rgb(244, 43, 3);
+    height: 60px;
+    width: 60px;
+    margin: 2%;
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px var(--secondary-color);
+    cursor: pointer;
+    transition: .3s ease-in
+}
+
+.ham-menu:hover {
+    background-color: rgb(231, 14, 2);
+    scale: 0.95;
+}
+
+.ham-menu span {
+    display: inline-block;
+    background-color: #fff;
+    height: 5px;
+    width: 45px;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 55px;
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 54px
+}
+/* End ham-menu */
+
+
+main.content {
+    flex-grow: 1;
+    display: flex;
+    margin: 1rem;
+}
+
+.flex {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1.title {
+    font-size: clamp(1.5rem, 1rem + 3vw, 3.5rem);
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(231, 14, 2, 0.5);
+    font-family: SauceT, sans-serif;
+    letter-spacing: 2px;
+}
+
+
+.btn {
+    margin: 0.5rem 0;
+    text-decoration: none;
+    background-color: rgb(244, 43, 3);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    box-shadow: 2px 2px var(--secondary-color);
+    color: #fff;
+    font-family: SauceT, sans-serif;
+    letter-spacing: 2px;
+    transition: .3s ease-in;
+}
+
+.btn:hover {
+    background-color: rgb(231, 14, 2);
+    scale: 1.05;
+}
+
+.logo {
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: .5rem;
+}
+
+main .text {
+    margin-top: .5rem;
+    text-align: center;
+    color: #000;
+    background-color: rgba(256, 256, 256, 0.8);
+    padding: var(--padding);
+    border: 2px solid #000;
+    border-radius: var(--border-radius);
+    box-shadow: 2px 2px var(--secondary-color);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: rgba(256, 256, 256, 0.9);
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.symbol {
+    font-size: 1.2rem;
+    color: rgb(244, 43, 3);
+    text-shadow: 2px 2px var(--secondary-color);
+    transform: .1s;
+}
+
+.symbol:hover {
+    color: rgb(231, 14, 2);
+}
+
+/* media queries */
+@media screen and (min-width: 772px) {
+    body {
+        background: none;
+    }
+}
