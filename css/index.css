@@ -5,7 +5,7 @@
 .btn {
     margin: 0.5rem 0;
     text-decoration: none;
-    background-color: rgb(244, 43, 3);
+    background-color: #AD1D01;
     padding: var(--padding);
     border-radius: var(--border-radius);
     box-shadow: 2px 2px var(--secondary-color);
