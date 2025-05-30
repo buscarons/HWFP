@@ -58,7 +58,7 @@ header,footer {
 
 .off-screen-menu a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     font-family: SauceT, sans-serif;
     letter-spacing: 1px;
     transition: .3s;
