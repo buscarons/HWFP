@@ -3,34 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Be your own Chef</title>
 </head>
 <body>
     <header>
         <div class="off-screen-menu">
             <ul>
-                <li><a href="">home</a></li>
-                <li><a href="">about</a></li>
-                <li><a href="">contact</a></li>
+                <li><a href="index.html">home</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="recipes.html">recipes</a></li>
             </ul>
         </div>
 
+        
         <nav>
+            <figure class="logo-img">
+                <a href="index.html">
+                    <img src="images/logo_chef.jpeg" alt="logo of the website, chef">
+                </a>
+            </figure>
+
             <div class="ham-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+            <ul class="desktop-view">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+            </ul>
         </nav>
     </header>
 
     <main class="content">
         <div class="flex">
+            <figure class="hero-img">
+                <img src="images/hero-chef.jpg" alt="chef with a wooden spoon and several ingredients">
+            </figure>
+
             <h1 class="title">Be your own Chef!</h1>
 
             <figure class="logo">
-                <img src="images/logo_chef.jpeg" alt="site logo of a chef holding a wooden spoon">
+                <img src="images/logo_chef-sm.jpeg" alt="site logo of a chef holding a wooden spoon">
             </figure>
 
             <p class="text">Cook delicious meals prepared with love by your own hand! Choose one of our perfectly curated recipes and enjoy!</p>
@@ -40,19 +58,8 @@
     </main>
 
     <footer>
-        <p>Website made with <i class="symbol">♥</i> by *****</p>
+        <p>Website made with<i class="symbol">♥</i> by Israel Buscarons</p>
     </footer>
+    <script src="js/base.js"></script>
 </body>
-<script>
-    const hamMenu = document.querySelector('.ham-menu')
-
-    const offScreenMenu = document.querySelector('.off-screen-menu')
-
-    hamMenu.addEventListener('click', () => {
-        console.log('click')
-        hamMenu.classList.toggle('active')
-
-        offScreenMenu.classList.toggle('active')
-    })
-</script>
 </html>

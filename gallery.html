@@ -3,21 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/gallery.css">
     <title>Choose your recipe</title>
 </head>
 <body>
     <header>
-        <nav>
+        <div class="off-screen-menu">
             <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="recipes.html">recipes</a></li>
+            </ul>
+        </div>
+
+        
+        <nav>
+            <figure class="logo-img">
+                <a href="index.html">
+                    <img src="images/logo_chef.jpeg" alt="logo of the website, chef">
+                </a>
+            </figure>
+
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="desktop-view">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Choose your recipe</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
             </ul>
         </nav>
     </header>
 
-    <main></main>
+    <main class="content">
+        <div class="flex">
+            <h1 class="title">Choose your recipe!</h1>
 
-    <footer></footer>
+            <section aria-label="Recipes Photos">
+                <button class="carousel-button prev" data-carousel-button="prev">&#171;</button>
+                <button class="carousel-button next" data-carousel-button="next">&#187;</button>
+
+                <div class="carousel" data-carousel>
+                    <ul data-slides>
+                        <li class="slide" data-active>
+                            <a href="recipes.html#noodles">
+                                <picture>
+                                    <source media="(min-width: 772px)" srcset="images/noodles-xl.jpg">
+                                    <img src="images/noodles-sm.jpg" alt="a circular dish of noodles">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a href="recipes.html#applePie">
+                                <picture>
+                                    <source media="(min-width: 772px)" srcset="images/apple-pie-xl.jpg">
+                                    <img src="images/apple-pie-sm.jpg" alt="a freshly baked apple pie">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a href="recipes.html#rice">
+                                <picture>
+                                    <source media="(min-width: 772px)" srcset="images/rice-dish-xl.jpg">
+                                    <img src="images/rice-dish-sm.jpg" alt="a rice dish with several ingredients">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a href="recipes.html#soup">
+                                <picture>
+                                    <source media="(min-width: 772px)" srcset="images/soup-xl.jpg">
+                                    <img src="images/soup-sm.jpg" alt="a very colorful soup">
+                                </picture>
+                            </a>
+                        </li>
+                    </ul> 
+                </div>
+            </section>
+
+            <p class="text text-gallery">Choose now! The dish of your dreams is waiting for you! Select one of our carefully design dishes to become your own chef and delight you and your guests! </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Website made with<i class="symbol">♥</i> by Israel Buscarons</p>
+    </footer>
+    <script src="js/base.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 </html>
